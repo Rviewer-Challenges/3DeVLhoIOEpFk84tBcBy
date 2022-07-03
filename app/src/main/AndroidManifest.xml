@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.silvacomp.gamerss">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,7 +16,12 @@
         android:theme="@style/Theme.GameRSS"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".detail.presentation.DetailActivity"
+            android:exported="false"
+            android:label="@string/title_activity_detail"
+            android:theme="@style/Theme.GameRSS" />
+        <activity
+            android:name=".home.presentation.HomeActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.GameRSS">
